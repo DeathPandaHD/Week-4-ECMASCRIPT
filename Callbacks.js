@@ -14,3 +14,5 @@ function logUsername(user) {
 senthttprequest('getUser', logUsername)
 
 sendhttprequest('getUser', user => console.log(user))
+
+//? this is update
