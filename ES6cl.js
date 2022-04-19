@@ -89,7 +89,24 @@ console.log(createFullName('Cruz','Garcia'));
 
 console.log(somefunction('Hello' , 3));
 
-//? CallBacks
+//? Promises
 
-//* A callback function is a function passed into another function as an argument, 
-//*   which is then invoked inside the outer function to complete some kind of routine or action.
+//* A Promise is an object representing the eventual completion or failure of an asynchronous operation.
+//* Since most people are consumers of already-created promises, 
+//* this guide will explain consumption of returned promises before explaining how to create them.
+
+//* Essentially, a promise is a returned object to which you attach callbacks, 
+//* instead of passing callbacks into a function.
+
+function handleEvent(value) {
+    console.log(value);
+}
+function handleError(err) {
+    console.error(err)
+    
+}
+
+doSomethingThingThatReturnsAPromise()
+    .then(handleEvent)
+    .catch(handleError)
+
